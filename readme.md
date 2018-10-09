@@ -2,6 +2,17 @@
 
 <img src="app/img/hero-1.png">
 
+Note the presence of `package.json` in the project folder. Examine it.
+
+Recall the Terminal commands we practiced last class. Use `cd` to navigate to this project's directory.
+
+Then:
+
+```sh
+$ npm install
+$ npm run start
+```
+
 ## FlexBox
 
 * CSS Flexible Box Layout Module
@@ -12,7 +23,7 @@ We will use [Font Awesome](http://fontawesome.io/) for the icons in this exercis
 
 In `app/index.html`:
 
-```
+```html
 <link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome.min.css">
 ```
 
@@ -22,7 +33,7 @@ For the logo:
 <a href="#0" class="logo"><i class="fa fa-bullseye fa-3x"></i></a>
 ```
 
-Gear:
+For the gear:
 
 ```html
 <i class="fa fa-gear"></i>
