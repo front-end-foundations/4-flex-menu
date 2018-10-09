@@ -39,6 +39,12 @@ For the gear:
 <i class="fa fa-gear"></i>
 ```
 
+Link to `styles.css`:
+
+```html
+<link rel="stylesheet" href="css/styles.css">
+```
+
 A font stack that ensures the [device's default font](https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/) will be used (native font):
 
 ```css
@@ -54,19 +60,21 @@ text-decoration: none;
 }
 
 header {
-  background: #0D1313;
-  color: #fff;
+  background: #111;
+  color: #eee;
   display: flex;
   align-items: center;
   padding:0.5rem;
 }
 ```
 
+Note the default behaviour once `flex` is applied.
+
 Hide the account dropdown:
 
 ```css
 .account-dropdown ul {
-    display: none;
+  display: none;
 }
 ```
 
@@ -74,8 +82,6 @@ Format the logo:
 
 ```css
 .logo {
-  text-decoration: none;
-  color: white;
   padding: 10px;
 }
 ```
@@ -92,10 +98,8 @@ Format the unordered list and links:
 
 .site-nav  a {
   text-transform: uppercase;
-  text-decoration: none;
   color: #CDD0D0;
   padding: 20px;
-  display: inline-block;
 }
 ```
 
@@ -109,7 +113,7 @@ Set up an active state:
 }
 ```
 
-Note the margin left auto setting for the actions section:
+Note the `margin-left: auto` setting for the actions section:
 
 ```css
 .account-actions {
@@ -124,7 +128,6 @@ Note the margin left auto setting for the actions section:
   font-size: 0.8rem;
   margin-left: 10px;
   text-transform: uppercase;
-  text-decoration: none;
 }
 ```
 
@@ -149,11 +152,18 @@ In a media query, turn wrapping on and set the order of the site nav to second p
 }
 ```
 
-<!-- Refactor CSS for `text-decoration`, `text-transform` ... -->
+```css
+.site-nav  a {
+  ...
+  display: inline-block;
+}
+```
 
 ### Interactivity
 
 See `index-done.html` for a demo.
+
+Link to `js/scripts.js`.
 
 Part ONE - get the gear icon to expose the options
 
@@ -182,6 +192,7 @@ Note - requires corresponding CSS (see `index-done.html`)
 }
 
 .account-dropdown ul {
+  font-size: 0.75rem;
   padding: 4px;
   margin: 0;
   list-style: none;
@@ -189,12 +200,13 @@ Note - requires corresponding CSS (see `index-done.html`)
   top: 20px; 
   left: 10px;
   color: #333;
-  background: #fff;
-  font-size: 0.875rem;
+  background: #eee;
+  border-radius: 3px;
+  cursor: pointer;
 }
 ```
 
-Add an active class to the navigation.
+Dynamically add an active class to the navigation.
 
 Introduces for loops and 'this' 
 
