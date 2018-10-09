@@ -4,9 +4,23 @@
 
 Note the presence of `package.json` in the project folder. Examine it.
 
-Recall the Terminal commands we practiced last class. Use `cd` to navigate to this project's directory.
+Recall the Terminal commands we practiced last class. 
 
-Then:
+* Note for Windows users: many of the commands below are different on Windows or have alternatives. Use the Git Bash terminal (installed along with Git) for best results.
+
+```
+$ cd <PATH> // copy and paste the folder you want to go to
+$ cd ~ // go to your home directory
+$ cd Desk // tab completion
+$ cd .. // go up one level
+$ ls
+$ls -al  // flags expand the command
+$ pwd
+```
+
+Note: tab completion, `..` and copy paste.
+
+Use `cd` to navigate to this project's directory. Then:
 
 ```sh
 $ npm install
