@@ -206,12 +206,9 @@ Note - requires corresponding CSS (see `index-done.html`)
 }
 ```
 
-Dynamically add an active class to the navigation.
-
-Introduces for loops and 'this' 
+Dynamically add an active class to the navigation (note `for` loops and `this`):
 
 ```js
-
 var mainNav = document.querySelectorAll('.site-nav li')
 
 for ( var i = 0; i < mainNav.length; i++){
@@ -227,6 +224,73 @@ function setActive(){
 }
 ```
 
+Refactor One (use `forEach`):
+
+```js
+mainNav.forEach(function (navItem) {
+  navItem.addEventListener('click', setActive)
+})
+
+function setActive() {
+  mainNav.forEach(function (navItem) {
+    navItem.classList.remove('active')
+  })
+  this.classList.add('active')
+  event.preventDefault()
+}
+```
+
+Refactor two (use arrow functions):
+
+```js
+mainNav.forEach(
+  navItem => navItem.addEventListener('click', setActive)
+)
+
+function setActive() {
+  mainNav.forEach(
+    navItem => navItem.classList.remove('active')
+  )
+  this.classList.add('active')
+  event.preventDefault()
+}
+```
+
+While there is a `NodeList.forEach()` method, it has poor browser support at this time.
+
+You can convert NodeLists into Arrays with the `Array.from()` method and use `Array.forEach()` instead.
+
+```js
+Array.from(mainNav).forEach(function (navItem) {
+  navItem.addEventListener('click', setActive)
+})
+
+function setActive() {
+  Array.from(mainNav).forEach(function (navItem) {
+    navItem.classList.remove('active')
+  })
+  this.classList.add('active')
+  event.preventDefault()
+}
+```
+
 ## Notes
 
-`"start": "browser-sync start  --server --watch"`
+```js
+{
+  "name": "flex-nav",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "browser-sync start --server 'app' --files 'app'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.26.0"
+  }
+}
+
+```
