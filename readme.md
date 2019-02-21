@@ -2,7 +2,7 @@
 
 <img src="app/img/hero-1.png">
 
-Note the presence of `package.json` in the project folder. Examine it.
+<!-- Note the presence of `package.json` in the project folder. Examine it.
 
 Recall the Terminal commands we practiced last class. 
 
@@ -25,17 +25,15 @@ Use `cd` to navigate to this project's directory. Then:
 ```sh
 $ npm install
 $ npm run start
-```
+``` -->
 
 ## FlexBox
 
-* CSS Flexible Box Layout Module
-* A simple guide to the various CSS properties on [CSS Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-* Try https://www.w3schools.com/css/css3_flexbox.asp
+Refer to this simple guide to the various CSS properties on [CSS Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/). (Good to keep open for reference.)
 
 We will use [Font Awesome](http://fontawesome.io/) for the icons in this exercise.
 
-In `app/index.html`:
+In `index.html`:
 
 ```html
 <link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome.min.css">
