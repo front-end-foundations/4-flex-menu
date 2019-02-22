@@ -36,19 +36,8 @@ We will use [Font Awesome](http://fontawesome.io/) for the icons in this exercis
 In `index.html`:
 
 ```html
-<link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome.min.css">
-```
-
-For the logo:
-
-```html
-<a href="#0" class="logo"><i class="fa fa-bullseye fa-3x"></i></a>
-```
-
-For the gear:
-
-```html
-<i class="fa fa-gear"></i>
+<!-- <link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome.min.css"> -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 ```
 
 Link to `styles.css`:
@@ -57,32 +46,88 @@ Link to `styles.css`:
 <link rel="stylesheet" href="css/styles.css">
 ```
 
-A font stack that ensures the [device's default font](https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/) will be used (native font):
+For the logo:
+
+```html
+<a href="#0" class="logo"><span class="fa fa-bullseye fa-3x"></span></a>
+```
+
+For the cog:
+
+```html
+<span class="fa fa-cog fa-5x"></span>
+```
+
+The end result looks like this:
+
+```html
+  <header>
+
+    <a href="#0" class="logo"><span class="fa fa-bullseye fa-3x"></span></a>
+
+    <nav class="site-nav">
+      <ul>
+        <li class="active"><a href="recipes.html">Recipes</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="delivery.html">Delivery</a></li>
+      </ul>
+    </nav>
+
+    <div class="account-actions">
+      <div class="account-dropdown">
+        <span class="fa fa-cog fa-lg"></span>
+        <ul>
+          <li>Your Account</li>
+        </ul>
+      </div>
+      <a href="#0" class="sign-out-link">Sign Out</a>
+    </div>
+
+  </header>
+```
+
+We'll use a system font stack that ensures the [device's native default font](https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/) will be used:
 
 ```css
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+  "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol";
 }
 ```
+
+Add some basic styles for the links:
 
 ```css
 a {
 color: #fff;
 text-decoration: none;
 }
+```
 
+And the header:
+
+```css
 header {
   background: #111;
   color: #eee;
-  display: flex;
-  align-items: center;
   padding:0.5rem;
 }
 ```
 
-Note the default behaviour once `flex` is applied.
+Apply flexbox to the header so all three chilren lay out horizontally:
 
-Hide the account dropdown:
+```css
+header {
+  ...
+  display: flex;
+  align-items: center;
+}
+```
+
+Note the default behaviour once `flex` is applied and the effect of `align-items: center`:
+
+The account features (preferences etc.) are going to be in a drop down menu so we'll hide them for now:
 
 ```css
 .account-dropdown ul {
@@ -94,11 +139,11 @@ Format the logo:
 
 ```css
 .logo {
-  padding: 10px;
+  padding: 1rem;
 }
 ```
 
-Format the unordered list and links:
+Format the unordered list and links. Note the use of flex:
 
 ```css
 .site-nav ul {
@@ -122,6 +167,7 @@ Set up an active state:
   font-weight: bold;
   color: #62DEBE;
   background: #444;
+  border-radius: 3px;
 }
 ```
 
@@ -132,13 +178,13 @@ Note the `margin-left: auto` setting for the actions section:
   margin-left: auto;
   display: flex;
   align-items: center;
-  margin-right: 10px;
+  margin-right: 1rem;
 }
 
 .sign-out-link {
-  color: #62DEBE;
+  color: #62debe;
   font-size: 0.8rem;
-  margin-left: 10px;
+  margin-left: 1rem;
   text-transform: uppercase;
 }
 ```
@@ -153,13 +199,18 @@ In a media query, turn wrapping on and set the order of the site nav to second p
 
 ```css
 @media (max-width: 600px) {
+  /* flex parent */
   header {
     flex-wrap: wrap;
   }
+  /* flex item two */
   .site-nav {
     order: 2;
-    background: #333;
     width: 100%;
+  }
+  .site-nav ul li {
+    flex-grow: 1;
+    display: flex;
   }
 }
 ```
@@ -167,7 +218,46 @@ In a media query, turn wrapping on and set the order of the site nav to second p
 ```css
 .site-nav  a {
   ...
-  display: inline-block;
+  /* display: inline-block; */
+  display: flex;
+}
+```
+
+Redrawing from the top. Focus on the header's use of flexbox.
+
+```css
+/* flex parent */
+header {
+  background: #111;
+  color: #eee;
+  padding:0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* new */
+}
+```
+
+```css
+/* flex item one */
+.logo {
+  padding: 1rem;
+}
+```
+
+```css
+/* flex item two */
+.site-nav {
+  flex-grow: 1; /* new */
+}
+```
+
+```css
+/* flex item three */
+.account-actions {
+  /* margin-left: auto; */ /* new */
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
 }
 ```
 
@@ -181,7 +271,7 @@ Part ONE - get the gear icon to expose the options
 
 ```js
 
-var gear = document.querySelector('.fa-gear')
+var gear = document.querySelector('.fa-cog')
 var options = document.querySelector('.account-dropdown ul')
 
 gear.addEventListener('click', showOptions)
@@ -194,8 +284,9 @@ function showOptions(){
 Note - requires corresponding CSS (see `index-done.html`)
 
 ```css
-.active {
-  display: flex !important;
+.account-dropdown ul.active {
+  display: flex;
+  flex-direction: column;
 }
 
 .account-dropdown {
