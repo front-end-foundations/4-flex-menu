@@ -210,7 +210,6 @@ In a media query, turn wrapping on and set the order of the site nav to second p
   }
   .site-nav ul li {
     flex-grow: 1;
-    display: flex;
   }
 }
 ```
