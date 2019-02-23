@@ -195,7 +195,7 @@ Add [the responsive meta tag](https://css-tricks.com/snippets/html/responsive-me
 <meta name="viewport" content="width=device-width">
 ```
 
-In a media query, turn wrapping on and set the order of the site nav to second place to improve the layout:
+In a media query, turn flex wrap on and set the order of the site nav to second place to improve the layout:
 
 ```css
 @media (max-width: 600px) {
