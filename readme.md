@@ -2,11 +2,66 @@
 
 <img src="app/img/hero-1.png">
 
-<!-- Note the presence of `package.json` in the project folder. Examine it.
+## The Terminal
 
-Recall the Terminal commands we practiced last class. 
+["Real developers know how to use command line." – Assholes](https://gomakethings.com/you-dont-need-to-know-command-line-to-be-a-good-developer/)
 
-* Note for Windows users: many of the commands below are different on Windows or have alternatives. Use the Git Bash terminal (installed along with Git) for best results.
+There are many good reasons to aquire a basic understanding of the command line terminal. In this class we will use the [Terminal](https://support.apple.com/guide/terminal/welcome/mac) app for GIT and GITHUB as well as for Node Package Manager (NPM).
+
+The Windows equivalent to Mac's Terminal app is [Powershell](https://docs.microsoft.com/en-us/powershell/) but there are important differences.
+
+Windows alternates to Powershell include [cmder](http://cmder.net/) or the shell that comes with [Git for Windows](https://gitforwindows.org/) aka "Git Bash." I suggest using Git Bash if you are on Windows.
+
+Some basic shell commands (note the use of '$' to indicate a prompt):
+
+```sh
+$ pwd
+$ ls
+$ ls -l 
+```
+
+```sh
+$ cd
+$ cd <path-to-folder>
+$ cd ..
+$ cd ~
+```
+
+Demo: tab completion, `..` and copy paste.
+
+On a mac you can `cd` to a folder via drag and drop or by copying and pasting a folder into the terminal.
+
+Windows examples for cd / ls
+
+```sh
+$ dir C:\windows
+$ chdir C:\windows
+```
+
+Again: on Windows: if you have Git installed you probably have `git-bash` on your computer. You can use that to run unix style commands (e.g. `ls` instead of `dir`).
+
+If you have Node installed you will be able to run JavaScript on the command line.
+
+```sh
+$ node --version
+$ npm --version
+$ git --version
+$ node
+$ > 12+12
+$ var el = document.querySelector('.anything') // this makes no sense in the node universe
+$ > .exit // or control + c
+$ clear // or control + k
+```
+
+Demo (Mac only unless you have installed Python on your PC) `cd` into today's folder and enter the following command into Terminal:
+
+```sh
+$ python -m SimpleHTTPServer 9001
+```
+
+Access `localhost:8000` in Chrome. Note the directory listing. `ctrl-c` to quit the process.
+
+* Many of the commands below are different on Windows or have alternatives. Use the Git Bash terminal for best results.
 
 ```
 $ cd <PATH> // copy and paste the folder you want to go to
@@ -18,14 +73,25 @@ $ls -al  // flags expand the command
 $ pwd
 ```
 
-Note: tab completion, `..` and copy paste.
+## Node Package Manager
+
+In order to familiarize you with node packages we will attempt to initiate hot reloading without using VS Code's Go Live extension.
+
+Note the presence of `package.json` in the project folder. Examine it in VS Code.
+
+```sh
+node --version
+npm --version
+```
 
 Use `cd` to navigate to this project's directory. Then:
 
 ```sh
 $ npm install
 $ npm run start
-``` -->
+```
+
+Note the addition of the `node_modules` folder.
 
 ## FlexBox
 
@@ -38,12 +104,6 @@ In `index.html`:
 ```html
 <!-- <link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome.min.css"> -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-```
-
-Link to `styles.css`:
-
-```html
-<link rel="stylesheet" href="css/styles.css">
 ```
 
 For the logo:
