@@ -1,0 +1,99 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+  "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  background: #111;
+  color: #eee;
+  padding:0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* new */
+}
+
+.account-dropdown ul {
+  display: none;
+}
+
+/* flex item one */
+.logo {
+  padding: 1rem;
+}
+
+/* flex item two */
+.site-nav {
+  flex-grow: 1; /* new */
+}
+
+.site-nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav a {
+  text-transform: uppercase;
+  color: #CDD0D0;
+  padding: 20px;
+    display: inline-block;
+    /* display: flex; */
+}
+
+.site-nav .active a {
+  color: #62DEBE;
+  background: #444;
+  border-radius: 3px;
+}
+
+/* .account-actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+} */
+
+/* flex item three */
+.account-actions {
+  /* margin-left: auto; */ /* new */
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.sign-out-link {
+  color: #62debe;
+  font-size: 0.8rem;
+  margin-left: 1rem;
+  text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+  /* flex parent */
+  header {
+    flex-wrap: wrap;
+  }
+  /* flex item two */
+  .site-nav {
+    order: 2;
+    width: 100%;
+  }
+  .site-nav ul li {
+    flex-grow: 1;
+  }
+}

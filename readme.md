@@ -4,7 +4,7 @@
 
 ## The Terminal
 
-["Real developers know how to use command line." – Assholes](https://gomakethings.com/you-dont-need-to-know-command-line-to-be-a-good-developer/)
+_"Real developers know how to use command line."_ – [Assholes](https://gomakethings.com/you-dont-need-to-know-command-line-to-be-a-good-developer/)
 
 There are many good reasons to aquire a basic understanding of the command line terminal. In this class we will use the [Terminal](https://support.apple.com/guide/terminal/welcome/mac) app for GIT and GITHUB as well as for Node Package Manager (NPM).
 
@@ -97,56 +97,63 @@ Note the addition of the `node_modules` folder.
 
 Refer to this simple guide to the various CSS properties on [CSS Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/). (Good to keep open for reference.)
 
-We will use [Font Awesome](http://fontawesome.io/) for the icons in this exercise.
+We will use [Font Awesome](https://fontawesome.com/start) for the icons in this exercise.
 
 In `index.html`:
 
 ```html
-<!-- <link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome.min.css"> -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 ```
 
 For the logo:
 
 ```html
-<a href="#0" class="logo"><span class="fa fa-bullseye fa-3x"></span></a>
+<a href="/" class="logo">
+  <span class="fa fa-bullseye fa-3x"></span>
+</a>
 ```
 
 For the cog:
 
 ```html
-<span class="fa fa-cog fa-5x"></span>
+<a href="#0">
+  <span class="fa fa-cog fa-5x"></span>
+</a>
 ```
 
 The end result looks like this:
 
 ```html
-  <header>
+<header>
 
-    <a href="#0" class="logo"><span class="fa fa-bullseye fa-3x"></span></a>
+  <a href="#0" class="logo">
+    <span class="fa fa-bullseye fa-3x"></span>
+  </a>
 
-    <nav class="site-nav">
+  <nav class="site-nav">
+    <ul>
+      <li class="active"><a href="recipes.html">Recipes</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="delivery.html">Delivery</a></li>
+    </ul>
+  </nav>
+
+  <div class="account-actions">
+    <div class="account-dropdown">
+      <a href="#0">
+        <span class="fa fa-cog fa-5x"></span>
+      </a>
       <ul>
-        <li class="active"><a href="recipes.html">Recipes</a></li>
-        <li><a href="reviews.html">Reviews</a></li>
-        <li><a href="delivery.html">Delivery</a></li>
+        <li>Your Account</li>
       </ul>
-    </nav>
-
-    <div class="account-actions">
-      <div class="account-dropdown">
-        <span class="fa fa-cog fa-lg"></span>
-        <ul>
-          <li>Your Account</li>
-        </ul>
-      </div>
-      <a href="#0" class="sign-out-link">Sign Out</a>
     </div>
+    <a href="#0" class="sign-out-link">Sign Out</a>
+  </div>
 
-  </header>
+</header>
 ```
 
-We'll use a system font stack that ensures the [device's native default font](https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/) will be used:
+For the actual text we'll use a system font stack that ensures the [device's native default font](https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/) will be used:
 
 ```css
 body {
@@ -224,7 +231,6 @@ Set up an active state:
 
 ```css
 .site-nav .active a {
-  font-weight: bold;
   color: #62DEBE;
   background: #444;
   border-radius: 3px;
@@ -249,7 +255,7 @@ Note the `margin-left: auto` setting for the actions section:
 }
 ```
 
-Add [the responsive meta tag](https://css-tricks.com/snippets/html/responsive-meta-tag/):
+Add [the viewport meta tag](https://css-tricks.com/snippets/html/responsive-meta-tag/):
 
 ```html
 <meta name="viewport" content="width=device-width">
