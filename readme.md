@@ -175,6 +175,7 @@ text-decoration: none;
 And the header:
 
 ```css
+/* flex parent */
 header {
   background: #111;
   color: #eee;
@@ -185,6 +186,7 @@ header {
 Apply flexbox to the header so all three chilren lay out horizontally:
 
 ```css
+/* flex parent */
 header {
   ...
   display: flex;
@@ -205,6 +207,7 @@ The account features (preferences etc.) are going to be in a drop down menu so w
 Format the logo:
 
 ```css
+/* flex item one */
 .logo {
   padding: 1rem;
 }
@@ -240,6 +243,7 @@ Set up an active state:
 Note the `margin-left: auto` setting for the actions section:
 
 ```css
+/* flex item three */
 .account-actions {
   margin-left: auto;
   display: flex;
@@ -323,6 +327,16 @@ header {
   display: flex;
   align-items: center;
   margin-right: 1rem;
+}
+```
+
+```css
+@media (max-width: 600px) {
+  ...
+  /* flex item three */
+  .account-actions {
+    margin-left: auto; 
+  }
 }
 ```
 

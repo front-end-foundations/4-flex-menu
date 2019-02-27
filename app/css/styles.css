@@ -96,4 +96,8 @@ header {
   .site-nav ul li {
     flex-grow: 1;
   }
+  /* flex item three */
+  .account-actions {
+    margin-left: auto;
+  }
 }
