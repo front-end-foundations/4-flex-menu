@@ -2,9 +2,8 @@
 
 ## Homework
 
-Assuming we get to [this part](https://github.com/front-end-foundations/4-flex-menu#dynamic-pages) of this exercise, go ahead and use a series if `if ... else` statements to dynamically insert content on the other pages.
-
-<img src="app/img/hero-1.png">
+* Work on your midterms
+* Assuming we get to [this part](https://github.com/front-end-foundations/4-flex-menu#dynamic-pages) of this exercise, go ahead and use a series if `if ... else` statements to dynamically insert content on the other pages.
 
 ## The Terminal
 
@@ -98,6 +97,8 @@ $ npm run start
 Make a change to the HTML and note the hot reloading. Note the addition of the `node_modules` folder.
 
 ## Design with FlexBox
+
+<img src="app/img/hero-1.png">
 
 See this [done version](http://oit2.scps.nyu.edu/~devereld/session3/3-flex-nav/) for a demo.
 
