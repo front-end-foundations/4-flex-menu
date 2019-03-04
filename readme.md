@@ -2,7 +2,7 @@
 
 ## Homework
 
-
+Assuming we get to [this part](https://github.com/front-end-foundations/4-flex-menu#dynamic-pages) of this exercise, go ahead and use a series if `if ... else` statements to dynamically insert content on the other pages.
 
 <img src="app/img/hero-1.png">
 
@@ -23,7 +23,7 @@ $ pwd
 $ ls
 $ ls -l 
 ```
-
+x
 ```sh
 $ cd
 $ cd <path-to-folder>
@@ -458,7 +458,7 @@ function setActive(){
 
 Note the use of `this` to refer to the clicked item. 
 
-### Refactor One (use `forEach`):
+### Refactor One (use forEach):
 
 ```js
 var mainNav = document.querySelectorAll('.site-nav li')
