@@ -71,7 +71,13 @@ $ npm install
 $ npm run start
 ```
 
-Make a change to the HTML and note the hot reloading. Note the addition of the `node_modules` folder.
+(Don't forget to use `ctrl-c` to shut down the server when done.)
+
+Make a change to the HTML and note the hot reloading. 
+
+Note the addition of the `node_modules` folder. This can get quite large. 
+
+Note the `.gitignore` file.
 
 ## Initialize a GIT Repo
 
@@ -80,6 +86,8 @@ git init
 git add .
 git commit -m 'initial commit'
 ```
+
+Create a branch in VS Code.
 
 ## Design with FlexBox
 
@@ -271,6 +279,8 @@ Note [the viewport meta tag](https://css-tricks.com/snippets/html/responsive-met
 
 Examine the layout using the inspector's Toggle Device tool.
 
+Try downloading Firefox [Developer Edition](https://www.mozilla.org/en-US/firefox/developer/) and note the difference between Chrome and Firefox's developer tools - especially in device mode.
+
 In a media query, turn flex wrap on and set the order of the site nav to second place to improve the layout:
 
 ```css
@@ -364,7 +374,9 @@ Link to `js/scripts.js` in the HTML:
 <script src="js/scripts.js"></script>
 ```
 
-Part ONE - click the gear icon to expose the options
+Part ONE - click the gear icon to expose the options.
+
+Inspect the layout to find the `<ul>` in the `.account-drop-down` div and toggle the display property.
 
 ```js
 // select the gear icon and the hidden drop down list
@@ -486,11 +498,13 @@ function setActive() {
 
 In our final revision we used the latest enhancements to JavaScript. These will be supported by most browsers but there are many enhancements that will have poor support.
 
-Many people use a tool to translate modern JavaScript into more broadly compatible JavaScript. This include [Babel](https://babeljs.io). Try translating our final scripts using their Try it out link.
+Many people use a tool to translate modern JavaScript into more broadly compatible JavaScript. The most commonly used tool is [Babel](https://babeljs.io). Try translating our final scripts using their "Try it out" link.
 
 While there is a `NodeList.forEach()` method, it has [partial browser support](https://developer.mozilla.org/en-US/docs/Web/API/NodeList/forEach#Browser_Compatibility) at this time. You can use a polyfill to support Internet Explorer.
 
 Or, you can convert NodeLists into Arrays with the `Array.from()` method and use `Array.forEach()` instead.
+
+E.g.: 
 
 ```js
 Array.from(mainNav).forEach(function (navItem) {
@@ -515,7 +529,7 @@ function setActive() {
   mainNav.forEach(
     navItem => navItem.classList.remove('active')
   )
-  console.log(event.target.parentNode)
+  console.log(event.target)
   event.target.parentNode.classList.add('active')
   event.preventDefault()
 }
@@ -523,7 +537,7 @@ function setActive() {
 
 ## Dynamic Pages
 
-Add the following after the head tag in the HTML:
+Add the following after the header in the HTML:
 
 ```html
 <article></article>
