@@ -103,7 +103,7 @@ git commit -m 'initial commit'
 
 <img src="app/img/hero-1.png">
 
-See this [done version](http://oit2.scps.nyu.edu/~devereld/session3/3-flex-nav/) for a demo.
+See this [done version](http://oit2.scps.nyu.edu/~devereld/session4/app/) for a demo.
 
 Refer to this simple guide to the various CSS properties on [CSS Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/). (Good to keep open for reference.)
 
@@ -374,7 +374,7 @@ Check the small screen layout using the Toggle Device tool.
 
 We want a menu of options (currently hidden via CSS) to display when the user clicks on the cog icon. We also want the active navigation item (Recipes Reviews Delivery) to change when we click on them.
 
-See this [done version](http://oit2.scps.nyu.edu/~devereld/session3/3-flex-nav/) for a demo.
+See this [done version](http://oit2.scps.nyu.edu/~devereld/session4/app/) for a demo.
 
 Link to `js/scripts.js` in the HTML:
 
