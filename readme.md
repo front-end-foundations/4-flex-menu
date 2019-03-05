@@ -9,36 +9,34 @@
 
 _"Real developers know how to use command line."_ – [Assholes](https://gomakethings.com/you-dont-need-to-know-command-line-to-be-a-good-developer/)
 
-There are many good reasons to aquire a basic understanding of the command line terminal. In this class we will use the [Terminal](https://support.apple.com/guide/terminal/welcome/mac) app for GIT and GITHUB as well as for Node Package Manager (NPM).
+There are many good reasons to aquire a basic understanding of the command line terminal. In this class we will use the [Terminal](https://support.apple.com/guide/terminal/welcome/mac) app for GIT and GITHUB as well as for [Node Package Manager](https://www.npmjs.com/) (NPM - is installed along with Node).
 
 The Windows equivalent to Mac's Terminal app is [Powershell](https://docs.microsoft.com/en-us/powershell/) but there are important differences. Many Windows users use the shell that comes with [Git for Windows](https://gitforwindows.org/) aka "Git Bash." 
 
 I suggest using Git Bash if you are on Windows.
 
-Some basic shell commands (note the use of '$' to indicate a prompt):
+Some basic shell commands (by convention the use of '$' indicates a prompt):
 
 ```sh
 $ pwd
-$ ls
-$ ls -l 
-```
-
-```sh
 $ cd
 $ cd <path-to-folder>
-$ cd ..
-$ cd ~
+$ cd .. // go up one level
+$ cd ~ // go to your home directory
+$ ls
+$ ls -l 
+$ ls -al // flags expand the command
 ```
 
-Demo: tab completion, `..` and copy paste.
+Demo: tab completion, history and copy paste.
 
-On a mac you can `cd` to a folder via drag and drop or by copying and pasting a folder into the terminal.
+Demo: on a mac you can `cd` into a folder via drag and drop or by copying and pasting a folder into the terminal.
 
-Native Windows examples for cd / ls:
+Demo: you can use ssh to connect to your account on `oit2.scps.nyu.edu`
 
 ```sh
-$ dir C:\windows
-$ chdir C:\windows
+$ cd <PATH> // copy and paste the folder you want to go to
+$ cd ~/Desk // tab completion
 ```
 
 Again: on Windows: if you have Git installed you probably have `git-bash` on your computer. You can use that to run unix style commands (e.g. `ls` instead of `dir`).
@@ -50,31 +48,13 @@ $ node --version
 $ npm --version
 $ git --version
 $ node
-$ > 12+12
-$ var el = document.querySelector('.anything') // this makes no sense in the node universe
-$ > .exit // or control + c
-$ clear // or command + k
+> var total = 12+12
+> var el = document.querySelector('.anything') // this makes no sense in the node universe
+> .exit // or control + c to exit node
+$ clear // or command + k to clear the terminal
 ```
 
-<!-- Demo (Mac only unless you have installed Python on your PC): `cd` into today's folder and enter the following command into Terminal:
-
-```sh
-$ python -m SimpleHTTPServer 9001
-```
-
-Access `localhost:8000` in Chrome. Note the directory listing. `ctrl-c` to quit the process. -->
-
-* Many of the commands below may be different on Windows or have alternatives. Use the Git Bash terminal for best results.
-
-```
-$ cd <PATH> // copy and paste the folder you want to go to
-$ cd ~ // go to your home directory
-$ cd Desk // tab completion
-$ cd .. // go up one level
-$ ls
-$ ls -al  // flags expand the command
-$ pwd
-```
+Use `cd` or the copy and paste method to get into today's exercise folder in the terminal.
 
 ## Node Package Manager
 
