@@ -34,6 +34,8 @@ Demo: on a mac you can `cd` into a folder via drag and drop or by copying and pa
 
 Demo: you can use ssh to connect to your account on `oit2.scps.nyu.edu`
 
+Demo: you can use VIM - a text editor `vi`, `:view index.html`, and `:q!`
+
 ```sh
 $ cd <PATH> // copy and paste the folder you want to go to
 $ cd ~/Desk // tab completion
