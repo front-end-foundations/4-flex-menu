@@ -2,7 +2,7 @@
 
 ## Homework
 
-* Work on your midterms
+* Work on your midterm assignment
 * Assuming we get to [this part](https://github.com/front-end-foundations/4-flex-menu#dynamic-pages) of this exercise, go ahead and use a series if `if ... else` statements to dynamically insert content on the other pages.
 
 ## The Terminal
@@ -11,9 +11,9 @@ _"Real developers know how to use command line."_ – [Assholes](https://gomaket
 
 There are many good reasons to aquire a basic understanding of the command line terminal. In this class we will use the [Terminal](https://support.apple.com/guide/terminal/welcome/mac) app for GIT and GITHUB as well as for Node Package Manager (NPM).
 
-The Windows equivalent to Mac's Terminal app is [Powershell](https://docs.microsoft.com/en-us/powershell/) but there are important differences.
+The Windows equivalent to Mac's Terminal app is [Powershell](https://docs.microsoft.com/en-us/powershell/) but there are important differences. Many Windows users use the shell that comes with [Git for Windows](https://gitforwindows.org/) aka "Git Bash." 
 
-Windows alternates to Powershell include [cmder](http://cmder.net/) or the shell that comes with [Git for Windows](https://gitforwindows.org/) aka "Git Bash." I suggest using Git Bash if you are on Windows.
+I suggest using Git Bash if you are on Windows.
 
 Some basic shell commands (note the use of '$' to indicate a prompt):
 
@@ -22,7 +22,7 @@ $ pwd
 $ ls
 $ ls -l 
 ```
-x
+
 ```sh
 $ cd
 $ cd <path-to-folder>
@@ -64,7 +64,7 @@ $ python -m SimpleHTTPServer 9001
 
 Access `localhost:8000` in Chrome. Note the directory listing. `ctrl-c` to quit the process. -->
 
-* Many of the commands below are different on Windows or have alternatives. Use the Git Bash terminal for best results.
+* Many of the commands below may be different on Windows or have alternatives. Use the Git Bash terminal for best results.
 
 ```
 $ cd <PATH> // copy and paste the folder you want to go to
@@ -72,7 +72,7 @@ $ cd ~ // go to your home directory
 $ cd Desk // tab completion
 $ cd .. // go up one level
 $ ls
-$ls -al  // flags expand the command
+$ ls -al  // flags expand the command
 $ pwd
 ```
 
@@ -81,11 +81,6 @@ $ pwd
 In order to familiarize you with node packages we will attempt to initiate hot reloading without using VS Code's Go Live extension.
 
 Note the presence of `package.json` in the project folder. Examine it in VS Code.
-<!-- 
-```sh
-node --version
-npm --version
-``` -->
 
 Use `cd` to navigate to this project's directory. Then:
 
@@ -95,6 +90,14 @@ $ npm run start
 ```
 
 Make a change to the HTML and note the hot reloading. Note the addition of the `node_modules` folder.
+
+## Initialize a GIT Repo
+
+```sh
+git init
+git add .
+git commit -m 'initial commit'
+```
 
 ## Design with FlexBox
 
@@ -278,13 +281,13 @@ Note the `margin-left: auto` setting for the actions section:
 
 ## Responsive Design
 
-Add [the viewport meta tag](https://css-tricks.com/snippets/html/responsive-meta-tag/) to the head of the HTML:
+Note [the viewport meta tag](https://css-tricks.com/snippets/html/responsive-meta-tag/) in the head of the HTML:
 
 ```html
 <meta name="viewport" content="width=device-width">
 ```
 
-And examine the screen using the inspector's Toggle Device tool.
+Examine the layout using the inspector's Toggle Device tool.
 
 In a media query, turn flex wrap on and set the order of the site nav to second place to improve the layout:
 
