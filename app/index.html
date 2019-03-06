@@ -4,15 +4,18 @@
   <meta charset="UTF-8">
   <title>Flex Nav</title>
   <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-
+  
   <header>
-
-    <a href="/" class="logo">Logo</a>
-
+    
+    <a href="/" class="logo" title="Company logo">
+      <span class="fa fa-bullseye fa-3x"></span>
+    </a>
+    
     <nav class="site-nav">
       <ul>
         <li class="active"><a href="#recipes">Recipes</a></li>
@@ -20,10 +23,14 @@
         <li><a href="#delivery">Delivery</a></li>
       </ul>
     </nav>
-
+    
     <div class="account-actions">
       <div class="account-dropdown">
-         <a href="#0">Gear</a>
+        
+        <a href="#0" title="Show account options">
+          <span class="fa fa-cog fa-lg"></span>
+        </a>
+        
         <ul>
           <li><a href="#0">Your Account</a></li>
           <li><a href="#0">Preferences</a></li>
@@ -32,8 +39,12 @@
       </div>
       <a href="#0" class="sign-out-link">Sign Out</a>
     </div>
-
+    
   </header>
 
+  <article></article>
+
+  
+  <script src="js/scripts.js"></script>
 </body>
 </html>

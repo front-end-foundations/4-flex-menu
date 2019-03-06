@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+  "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+color: #fff;
+text-decoration: none;
+}
+
+/* flex parent */
+header {
+  background: #111;
+  color: #eee;
+  padding:0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.account-dropdown ul {
+  display: none;
+}
+
+/* flex item 1 */
+.logo {
+  padding: 1rem;
+}
+
+/* flex item 2 */
+.site-nav {
+  flex-grow: 1;
+}
+
+.site-nav ul {
+  display: flex;
+}
+
+.site-nav a {
+  text-transform: uppercase;
+  color: #cdd0d0;
+  padding: 20px;
+  /* display: flex; */
+  display: inline-block;
+}
+
+.site-nav .active a {
+  color: #62debe;
+  background: #444;
+  border-radius: 3px;
+}
+/* flex item 3 */
+.account-actions {
+  display: flex;
+  align-items: center;
+  /* margin-left: auto; */
+  margin-right: 1rem;
+}
+
+.sign-out-link {
+  color: #62debe;
+  font-size: 0.85rem;
+  margin-left: 1rem;
+  text-transform: uppercase;
+}
+
+.account-dropdown ul.active {
+  display: flex;
+  flex-direction: column;
+}
+
+.account-dropdown {
+  position: relative;
+  display: flex;
+}
+
+.account-dropdown ul {
+  padding: 4px;
+  position: absolute;
+  top: 20px; 
+  right: 0;
+  background: #eee;
+  border-radius: 3px;
+  min-width: 100px;
+}
+
+.account-dropdown ul a {
+  color: #333;
+  padding: 0.25rem;
+  display: inline-block;
+  font-size: 0.75rem;
+}
+
+.account-dropdown ul a:hover {
+  color: #62DEBE;
+}
+
+@media (max-width: 600px){
+  /* flex parent */
+  header {
+    flex-wrap: wrap;
+  }
+  /* flex item 2 */
+  .site-nav {
+    width: 100%;
+    order: 2;
+  }
+  .site-nav ul li {
+    flex-grow: 1;
+  }
+}

@@ -4,7 +4,7 @@
   "description": "A simple demonstration of Flexbox applied to a navbar",
   "main": "index.js",
   "scripts": {
-    "start": "browser-sync start --server 'app' --files 'app'"
+    "start": "browser-sync start --server \"app\" --files \"app\""
   },
   "keywords": [],
   "author": "",
